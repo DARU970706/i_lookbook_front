@@ -2,7 +2,7 @@
   <div>
     <div class="login_box">
       <div class="login_top">
-        <h3>Vue Template</h3>
+        <h3>Login</h3>
       </div>
       <div class="login_middle">
         <br>
@@ -14,8 +14,7 @@
         </form>
       </div>
       <div class="login_bottom">
-        <label>회원이 아니신가요? </label><a href="#">회원 가입</a><br>
-        <a href="#">비밀번호 찾기</a><br>
+          <a href="sign">회원가입</a> | <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
       </div>
     </div>
   </div>
@@ -49,22 +48,30 @@ export default {
     text-decoration-line: none;
   }
   .login_box{
+    top: 70px;
+    transform: translate(-50%, 0%);
+    position: absolute;
+    margin-top: 40px;
     display: inline-block;
   }
   .login_top{
-    background-color: rgb(246,246,246);
+    background-color: rgb(251,251,251);
     width: 300px;
-    height: 50px;
+    height: 70px;
     display: inline-block;
     border-color: rgb(200,200,200);
     border-width: 1px;
-    color : rgb(100,100,100);
+    color : black;
+    font-weight: bolder;
+    font-size: 20px;
     border-style: solid;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     margin-bottom: 10px;
     display:table-cell;
     vertical-align:middle;
+    padding-left: 25px;
+    text-align: left;
   }
   .login_middle{
     border-color: rgb(200,200,200);
@@ -72,47 +79,43 @@ export default {
     color : rgb(100,100,100);
     border-top-color: white;
     border-style: solid;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 25px;
   }
   .login_bottom{
-    background-color: rgb(246,246,246);
-    font-size: 14px;
+    font-size: 15px;
     width: 300px;
-    height: 50px;
     display: inline-block;
-    border-color: rgb(200,200,200);
-    border-width: 1px;
     color : rgb(100,100,100);
-    border-style: solid;
-    border-top-color: white;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    margin-bottom: 10px;
     display:table-cell;
     vertical-align:middle;
   }
   .input_text{
-    width: 245px;
-    height: 40px;
+    width: 87%;
+    height: 50px;
     text-align: left;
-    text-indent: 5px;
+    text-indent: 10px;
     border-color: rgb(221,221,221);
     border-width: 1px;
-    color : rgb(100,100,100);
+    color : rgb(175,175,175);
+    font-size: 15px;
     border-style: solid;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .login_button{
-    width: 250px;
-    height: 40px;
+    width: 89%;
+    height: 60px;
     text-align: center;
-    font-size: 15px;
-    background-color: rgb(110,117,124);
-    color : rgb(215,217,219);
-    border-color: rgb(128,134,140);
+    font-size: 24px;
+    font-weight: bolder;
+    background-color: rgb(70,130,255);
+    color : white;
+    border-color: rgb(71,125,255);
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 </style>

@@ -15,7 +15,7 @@ const beforeAuth = isAuth => (from, to, next) => {
 const isLogin = isAuth => (from, to, next) => {
   const token = store.state.accessToken
   if (token !== undefined && token !== '') {
-    next('/')
+    next('/login')
   } else {
     return next()
   }
@@ -38,6 +38,31 @@ const routes = [
     name: 'login',
     component: () => import('../views/login'),
     beforeEnter: isLogin(true)
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component: () => import('../views/logout')
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: () => import('../views/account')
+  },
+  {
+    path: '/md',
+    name: 'md',
+    component: () => import('../views/md')
+  },
+  {
+    path: '/sign',
+    name: 'sign',
+    component: () => import('../views/sign')
+  },
+  {
+    path: '/upload',
+    name: 'upload',
+    component: () => import('../views/upload')
   }
 ]
 

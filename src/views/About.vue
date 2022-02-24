@@ -1,4 +1,5 @@
 <template>
+  <navigaters/>
   <div class="about">
     {{this.response}}
     <h1>This is an about page</h1>
@@ -6,9 +7,12 @@
   <div class="dropdown">
   </div>
 </template>
-
 <script>
+import navigaters from '@/components/nav/nav.vue'
 export default {
+  components: {
+    navigaters: navigaters
+  },
   data () {
     return {
       response: ''

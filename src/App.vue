@@ -1,31 +1,36 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/login">login</router-link>
+  <navigaters/>
+  <div class="contents">
+    <router-view/>
   </div>
-  <router-view/>
 </template>
+
+<script>
+import navigaters from '@/components/nav/nav.vue'
+export default {
+  name: 'Home',
+  components: {
+    navigaters
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
-  @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+  @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
   font-family: 'Nanum Gothic';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
+.contents {
+  position: absolute;
+  width: 100%;
+  top:148px;
 }
 </style>

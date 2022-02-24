@@ -4,7 +4,8 @@ export default createStore({
   state: {
     username: '',
     accessToken: '',
-    refreshToken: ''
+    refreshToken: '',
+    target: 'localhost'
   },
   mutations: {
     setUsername (state, username) {
@@ -15,6 +16,11 @@ export default createStore({
     },
     setRefreshToken (state, token) {
       state.refreshToken = token
+    },
+    logout (state) {
+      state.refreshToken = ''
+      state.username = ''
+      state.accessToken = ''
     }
   },
   actions: {},
